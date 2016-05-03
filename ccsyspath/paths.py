@@ -12,7 +12,7 @@ def system_include_paths(compiler, cpp=True):
         p = subprocess.Popen(cmd, stdin=devnull, stdout=PIPE, stderr=PIPE)
         p.wait()
         lines = p.stderr.read()
-        lines = lines.split('\n')
+        lines = lines.splitlines()
 
     idx = lines.index('#include <...> search starts here:')
     lines = lines[idx+1:-2]
