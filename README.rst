@@ -46,7 +46,7 @@ want to contribute code, please `fork the code`_ and `submit a pull request`_.
    :target: https://travis-ci.org/AndrewWalker/ccsyspath
    :alt: Continuous Integration
 
-.. |coverage| image:: https://coveralls.io/repos/github/AndrewWalker/ccsyspath/badge.svg?branch=master 
+.. |coverage| image:: https://coveralls.io/repos/github/AndrewWalker/ccsyspath/badge.svg?branch=master
    :target: https://coveralls.io/github/AndrewWalker/ccsyspath?branch=master
    :alt: Coverage Testing Results
 
