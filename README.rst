@@ -1,7 +1,7 @@
 ccsyspath 
 =========
 
-**ccsyspath helps you find the system include path of your c/c++ compilers system include path**
+**ccsyspath helps you find the system include path of your c/c++ compiler**
 
 Supports gcc and clang c compilers.
 
