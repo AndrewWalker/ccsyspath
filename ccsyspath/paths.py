@@ -14,8 +14,8 @@ def system_include_paths(compiler, cpp=True):
         lines = p.stderr.read()
         lines = lines.splitlines()
 
-    idx = lines.index('#include <...> search starts here:')
+    idx = lines.index(b'#include <...> search starts here:')
     lines = lines[idx+1:-2]
     lines = [ line[1:] for line in lines ]
-    paths = [ line.split(' ')[0] for line in lines]
+    paths = [ line.split(b' ')[0] for line in lines]
     return paths 
