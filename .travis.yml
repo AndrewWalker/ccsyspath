@@ -1,0 +1,21 @@
+language: python
+sudo: required
+dist: trusty
+python:
+    - "2.6"
+    - "2.7"
+    - "3.2"
+    - "3.3"
+    - "3.4"
+    - "3.5"
+before_install:
+    - wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
+    - echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.8 main" | sudo tee -a /etc/apt/sources.list
+    - sudo apt-get update -qq
+    - sudo apt-get install -y clang-3.8
+    - pip install -r requirements.txt
+script:
+    - coverage run setup.py test
+    - coverage report --show-missing
+after_success:
+    - coveralls
