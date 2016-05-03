@@ -1,0 +1,5 @@
+[run]
+source=ccsyspath
+
+[report]
+include=ccsyspath*
