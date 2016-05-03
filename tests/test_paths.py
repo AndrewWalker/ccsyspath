@@ -1,6 +1,5 @@
 import ccsyspath
 import unittest
-from pprint import pprint
 
 
 class TestPaths(unittest.TestCase):
