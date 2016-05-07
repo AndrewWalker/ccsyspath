@@ -10,13 +10,16 @@ def read(filename):
 
 setup(
     name         = "ccsyspath",
-    version      = "1.0.1",
+    version      = "1.0.2",
     description  = "Find the system include paths for clang and gcc C/C++ compilers",
     long_description = read('README.rst'),
     author       = "Andrew Walker",
     author_email = "walker.ab@gmail.com",
+    maintainer   = "Andrew Walker"
+    maintainer_email = "walker.ab@gmail.com",
     url          = "http://github.com/AndrewWalker/ccsyspath",
     license      = "MIT",
+    keywords     = [ 'clang', 'gcc', 'compiler' ],
     packages     = find_packages(), 
     classifiers  = [
         'Development Status :: 5 - Production/Stable',
@@ -30,8 +33,8 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
-        'Operating System :: MacOS :: MacOS X',
-        'Operating System :: POSIX :: Linux',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Operating System :: OS Independent',
     ],
     tests_require=['unittest2'],
     test_suite='unittest2.collector'
