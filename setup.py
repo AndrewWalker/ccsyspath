@@ -15,7 +15,7 @@ setup(
     long_description = read('README.rst'),
     author       = "Andrew Walker",
     author_email = "walker.ab@gmail.com",
-    maintainer   = "Andrew Walker"
+    maintainer   = "Andrew Walker",
     maintainer_email = "walker.ab@gmail.com",
     url          = "http://github.com/AndrewWalker/ccsyspath",
     license      = "MIT",
