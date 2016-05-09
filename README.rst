@@ -20,6 +20,22 @@ the `system_include_paths` function.
     paths = ccsyspath.system_include_paths('/path/to/clang')
 
 
+Installing
+----------
+
+You can install the latest stable version from PyPI
+
+.. code:: console
+
+    $ pip install ccsyspath
+
+Or, you can install the latest development version from GitHub
+
+.. code:: console 
+
+    $ pip install git+git://github.com/AndrewWalker/ccsyspath.git
+
+
 Acknowledgements
 ----------------
 
