@@ -23,12 +23,15 @@ def system_include_paths(compiler, cpp=True):
     if cpp:
         extraflags = b'-x c++'.split()
     lines = compiler_preprocessor_verbose(compiler, extraflags)
+    lines = [ line.strip() for line in lines ]
 
-    idx = lines.index(b'#include <...> search starts here:')
-    lines = lines[idx+1:-2]
+    start = lines.index(b'#include <...> search starts here:')
+    end   = lines.index(b'End of search list.')
+
+    lines = lines[start+1:end]
     paths = []
     for line in lines:
-        line = line.replace(b'(framework directory', b'')
+        line = line.replace(b'(framework directory)', b'')
         line = line.strip()
         paths.append(line)
     return paths 
