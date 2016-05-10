@@ -10,7 +10,7 @@ def read(filename):
 
 setup(
     name         = "ccsyspath",
-    version      = "1.0.2",
+    version      = "1.1.0",
     description  = "Find the system include paths for clang and gcc C/C++ compilers",
     long_description = read('README.rst'),
     author       = "Andrew Walker",
