@@ -19,6 +19,30 @@ the `system_include_paths` function.
 
     paths = ccsyspath.system_include_paths('/path/to/clang')
 
+For example, you could add the following to `~/.vim/after/ftplugin/cpp.vim` to
+enable vim to find your C++ standard library, which allows goto-file to work
+for system headers.
+
+.. code:: vimscript
+
+    python << EOF
+    import vim
+    import os
+    try:
+        from ccsyspath import system_include_paths
+        from distutils.spawn import find_executable
+        CXX = os.environ.get('CXX', None)
+        if CXX is None:
+            CXX = find_executable('clang++')
+        if CXX is None:
+            CXX = find_executable('g++')
+        for p in system_include_paths(CXX):
+            vim.command('set path+=%s' % p.replace(' ', '\ '))
+    except:
+        pass
+    EOF
+
+
 
 Installing
 ----------
