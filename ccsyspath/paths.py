@@ -1,5 +1,5 @@
 import subprocess
-from subprocess import PIPE
+from subprocess import Popen, PIPE
 import os
 import re
 
@@ -11,10 +11,10 @@ def compiler_preprocessor_verbose(compiler, extraflags):
         cmd = [compiler, '-E'] 
         cmd += extraflags
         cmd += ['-', '-v']
-        p = subprocess.Popen(cmd, stdin=devnull, stdout=PIPE, stderr=PIPE)
-        p.wait()
-        lines = p.stderr.read()
-        lines = lines.splitlines()
+        with Popen(cmd, stdin=devnull, stdout=PIPE, stderr=PIPE) as p:
+            p.wait()
+            lines = p.stderr.read()
+            lines = lines.splitlines()
     return lines
 
 
