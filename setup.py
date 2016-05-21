@@ -27,7 +27,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
@@ -36,7 +35,5 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
         'Operating System :: OS Independent',
     ],
-    tests_require=['unittest2'],
-    test_suite='unittest2.collector'
 )
 
