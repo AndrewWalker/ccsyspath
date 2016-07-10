@@ -35,5 +35,5 @@ def system_include_paths(compiler, cpp=True):
     for line in lines:
         line = line.replace('(framework directory)', '')
         line = line.strip()
-        paths.append(line)
+        paths.append(line.decode('utf-8'))
     return paths 
