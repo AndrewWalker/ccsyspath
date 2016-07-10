@@ -16,10 +16,9 @@ addons:
       - llvm-toolchain-precise-3.8
     packages: 
       - clang-3.8
-      - libclang-3.8-dev
 
 install:
-  - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LLVM_HOME/lib
+  - export PATH=$PATH:$LLVM_HOME/bin
   - if [[ $TRAVIS_PYTHON_VERSION == 2* ]]; then ln -s /usr/lib/python2.7/dist-packages/clang; fi
   - pip install -r requirements.txt
   - python setup.py install
